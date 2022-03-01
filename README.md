@@ -18,9 +18,7 @@ Additional description about the project and its features.
 - Git
 - Webpack
 
-
 ## [Live Demo Link](https://mwafrika.github.io/leaderboard/)
-
 
 ## Built With
 
@@ -41,63 +39,33 @@ The basic requirements for building the executable are:
 <br>
 <br>
 
-# Setup WebApp
+# Getting started
 
 #### Get the full documentation about the webpack [here](https://webpack.js.org/guides/asset-management/)
 
-#### Cloning the project
+### 1. Clone the project
 
 ```
 git clone https://github.com/vikipretium/awesome-books-project.git
 ```
 
-#### cd into the cloned repository and Install all the dependancies for the project
+### 2. cd into the cloned repository and Install all the dependancies
 
 ```
 npm install
 ```
 
-## Getting packages and debuging with Stylelint
+### 3. Run the project
 
 ```
-npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+npm start
 ```
 
-##### For validation detection using Stylelint Run
+# Prerequisites
 
-```
-npx stylelint "**/*.{css,scss}"
-```
+Internet connection and basic computing skills. Load the page and enjoy!
 
-##### from parent source directory
-
-## Getting packages and debuging with Webhint
-
-```
-npm init -y
-npm install --save-dev hint@6.x
-```
-
-##### For validation detection using Webhint Run
-
-```
-npx hint .
-```
-
-## Getting packages and debuging with Eslint
-
-```
-npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-
-```
-
-##### For validation detection using Eslint Run
-
-```
-
-npx eslint .
-
-```
+# Author
 
 👤 **Mwafrika Josue**
 
