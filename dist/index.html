@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hari Ram" />
+    <title>Leaderboard App</title>
+    <meta
+      name="description"
+      content="This is a front-end coding challenge - TODO APP"
+    />
+    <script defer src="bundle.js"></script>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <header>
+      <h1>Leaderboard</h1>
+    </header>
+    <main>
+      <section class="board">
+        <section class="items">
+          <div class="board-title">
+            <h1>Recent score</h1>
+            <input type="button" value="Refresh" />
+          </div>
+          <ul class="board-items">
+            <li><span>Name :</span><span>100</span></li>
+            <li><span>Name :</span><span>80</span></li>
+            <li><span>Name :</span><span>70</span></li>
+            <li><span>Name :</span><span>54</span></li>
+            <li><span>Name :</span><span>40</span></li>
+            <li><span>Name :</span><span>101</span></li>
+            <li><span>Name :</span><span>120</span></li>
+          </ul>
+        </section>
+        <section class="add-score">
+          <h1>Add your score</h1>
+          <form method="POST">
+            <input type="text" placeholder="Your name" />
+            <input type="text" placeholder="Your score" />
+            <input type="submit" value="Submit" />
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
