@@ -18,9 +18,9 @@ Additional description about the project and its features.
 - Git
 - Webpack
 
-## Live Demo
 
-[Live Demo Link](https://mwafrika.github.io/awasome-book-es6/)
+## [Live Demo Link](https://mwafrika.github.io/leaderboard/)
+
 
 ## Built With
 
