@@ -60,6 +60,11 @@ header {
   color: #333;
 }
 
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .add-score form input {
   height: 50px;
   border-radius: 5px;
@@ -85,11 +90,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Firefox */
-input[type='number'] {
-  -moz-appearance: textfield;
 }
 
 .add-score form input[type='submit'] {
