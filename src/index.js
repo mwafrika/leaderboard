@@ -1,22 +1,11 @@
 import '@fortawesome/fontawesome-free/js/all.js';
+import Score from './score.js';
 
 import('./style/style.css');
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
-class LeaderboardInfo {
-  constructor(user, score) {
-    this.user = user;
-    this.score = score;
-    this.arr = [];
-  }
-}
-
-class UI {
-  static showInfo = () => {
-    const info = [];
-    info.forEach((item) => UI.addBook(item));
-  };
-
-  static addBook = (userInfo) => {
+class Game {
+  static displayScore = (userInfo) => {
     const ul = document.querySelector('.board-items');
     const li = document.createElement('li');
     li.innerHTML = `
@@ -25,41 +14,51 @@ class UI {
     ul.appendChild(li);
   };
 
-  static submitAction = (event) => {
+  static addScore = (event) => {
     event.preventDefault();
     const user = document.querySelector('#name').value;
     const score = document.querySelector('#score').value;
 
     if (user && score) {
-      let data = new LeaderboardInfo(user, score);
-      console.log(data);
-      UI.postData(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwaf/scores/',
-        data
-      ).then((data) => {
-        UI.addBook(data);
-        console.log(data);
-      });
+      const data = new Score(user, score);
+      Game.createScore(`${url}Zl4d7IVkecOTTVg2fUdz/scores/`, data).then(
+        (res) => {
+          const message = document.querySelector('.message');
+          if (res) {
+            message.style.display = 'flex';
+            message.innerHTML = `
+        <div class="close"><i class="fas fa-close"></i></div>
+        <span class="text">${res.result}</span> `;
 
-      //   UI.addBook(data);
+            setTimeout(() => {
+              message.style.display = 'none';
+            }, 2000);
+          } else {
+            message.style.display = 'none';
+          }
+          document
+            .querySelector('.message .close')
+            .addEventListener('click', () => {
+              message.style.display = 'none';
+            });
+        },
+      );
+
+      Game.clearInputs();
     }
   };
 
-  static getData = () => {
-    fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mwaf/scores/'
-    )
+  static refreshScore = () => {
+    fetch(`${url}Zl4d7IVkecOTTVg2fUdz/scores/`)
       .then((res) => res.json())
-      .then((res) => {
-        console.log(res.result, 'Get my data');
-        UI.showInfo(res.result);
-        // let ar = new LeaderboardInfo();
-        // ar.arr.push(res.result);
-        localStorage.setItem('game', JSON.stringify(res.result));
+      .then((data) => {
+        const ul = document.querySelector('.board-items');
+        ul.replaceChildren();
+        data.result.forEach((score) => Game.displayScore(score));
       });
   };
 
-  static postData = async (url = '', data = {}) => {
+  static createScore = async (url = '', data = {}) => {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -69,15 +68,16 @@ class UI {
     });
     return response.json();
   };
+
+  static clearInputs = () => {
+    document.querySelector('#name').value = '';
+    document.querySelector('#score').value = '';
+  };
 }
 
-const getLocal = () => {
-  return JSON.parse(localStorage.getItem('game')) || [];
-};
-
-document.querySelector('#refresh').addEventListener('click', UI.getData);
+document.querySelector('#refresh').addEventListener('click', Game.refreshScore);
 
 document
   .querySelector('#form-container')
-  .addEventListener('submit', UI.submitAction);
-document.addEventListener('DOMContentLoaded', UI.showInfo);
+  .addEventListener('submit', Game.addScore);
+document.addEventListener('DOMContentLoaded', Game.refreshScore);

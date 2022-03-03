@@ -8,10 +8,9 @@
     <title>Leaderboard App</title>
     <meta
       name="description"
-      content="This is a front-end coding challenge - TODO APP"
+      content="This is a front-end coding challenge - Leaderboard APP"
     />
-    <script defer src="bundle.js"></script>
-  </head>
+  <script defer src="bundle.js"></script></head>
   <body>
     <header>
       <h1>Leaderboard</h1>
@@ -21,7 +20,7 @@
         <section class="items">
           <div class="board-title">
             <h2>Recent score</h2>
-            <input type="button" value="Refresh" />
+            <input type="button" id="refresh" value="Refresh" />
           </div>
           <ul class="board-items"></ul>
         </section>
@@ -35,6 +34,7 @@
               id="score"
               placeholder="Your score"
             />
+            <span class="message"></span>
             <input type="submit" value="Submit" />
           </form>
         </section>
