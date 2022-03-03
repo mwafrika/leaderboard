@@ -11,7 +11,7 @@
       content="This is a front-end coding challenge - TODO APP"
     />
     <script defer src="bundle.js"></script>
-  <script defer src="bundle.js"></script></head>
+  </head>
   <body>
     <header>
       <h1>Leaderboard</h1>
@@ -20,24 +20,21 @@
       <section class="board">
         <section class="items">
           <div class="board-title">
-            <h1>Recent score</h1>
+            <h2>Recent score</h2>
             <input type="button" value="Refresh" />
           </div>
-          <ul class="board-items">
-            <li><span>Name :</span><span>100</span></li>
-            <li><span>Name :</span><span>80</span></li>
-            <li><span>Name :</span><span>70</span></li>
-            <li><span>Name :</span><span>54</span></li>
-            <li><span>Name :</span><span>40</span></li>
-            <li><span>Name :</span><span>101</span></li>
-            <li><span>Name :</span><span>120</span></li>
-          </ul>
+          <ul class="board-items"></ul>
         </section>
         <section class="add-score">
-          <h1>Add your score</h1>
-          <form method="POST">
-            <input type="text" placeholder="Your name" />
-            <input type="text" placeholder="Your score" />
+          <h2>Add your score</h2>
+          <form method="POST" id="form-container">
+            <input type="text" name="name" id="name" placeholder="Your name" />
+            <input
+              type="text"
+              name="score"
+              id="score"
+              placeholder="Your score"
+            />
             <input type="submit" value="Submit" />
           </form>
         </section>
