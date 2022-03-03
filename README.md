@@ -6,7 +6,7 @@
 
 ## Leaderboard
 
-![screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1646151417/MICROVERSE/capstone-project-html-css-javascript/leaderboard_n8uexi.png)
+![screenshot](https://res.cloudinary.com/ujuzi/image/upload/v1646316055/MICROVERSE/capstone-project-html-css-javascript/leaderboard_ttnzca.png)
 
 Additional description about the project and its features.
 
