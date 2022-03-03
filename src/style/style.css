@@ -56,8 +56,9 @@ header {
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-  background-color: #ddd;
-  color: #333;
+  background-color: grey;
+  color: #fff;
+  box-shadow: 3px 3px #c5c5c5;
 }
 
 .add-score form input {
@@ -80,28 +81,47 @@ header {
 }
 
 .add-score form input[type='submit'] {
-  width: 20%;
-  padding: 0 10px;
+  padding: 12px 25px;
   float: right;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #ddd;
+  background-color: grey;
+  color: #fff;
+  box-shadow: 3px 3px #c5c5c5;
 }
 
 .add-score form input[type='submit']:hover {
   background-color: grey;
   color: #fff;
+  animation: dance 1s ease-in-out 0s infinite normal;
 }
 
 .board-title input:hover {
-  background-color: grey;
-  color: #fff;
+  animation: dance 1s ease-in-out 0s infinite normal;
 }
 
 .add-score form input:nth-child(4) {
   display: flex;
   align-self: flex-end;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  33% {
+    transform: rotate(15deg) scale(1.1);
+  }
+
+  66% {
+    transform: rotate(-15deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 .items {
@@ -114,6 +134,7 @@ header h1,
 .add-score h1,
 .board-items li {
   color: #333;
+  font-style: italic;
 }
 
 .board-title {
@@ -140,6 +161,8 @@ header h1,
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+  border-top: 2px solid #333;
+  padding-top: 10px;
 }
 
 .board-items::-webkit-scrollbar {
@@ -211,6 +234,7 @@ header h1,
   .add-score h1 {
     width: 90%;
     margin: 10px 20px;
+    font-style: italic;
   }
 
   header {
