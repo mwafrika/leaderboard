@@ -46,7 +46,7 @@ The basic requirements for building the executable are:
 ### 1. Clone the project
 
 ```
-git clone https://github.com/vikipretium/awesome-books-project.git
+git clone https://github.com/mwafrika/leaderboard.git
 ```
 
 ### 2. cd into the cloned repository and Install all the dependancies
