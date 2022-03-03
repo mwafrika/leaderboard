@@ -67,7 +67,8 @@ header {
   box-sizing: border-box;
 }
 
-.add-score form input[type='text'] {
+.add-score form input[type='text'],
+.add-score form input[type='number'] {
   width: 100%;
   padding: 0 10px;
   font-size: 1rem;
@@ -75,8 +76,20 @@ header {
   background-color: #ddd;
 }
 
-.add-score form input[type='text']:focus {
+.add-score form input[type='text']:focus,
+.add-score form input[type='number']:focus {
   outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .add-score form input[type='submit'] {
