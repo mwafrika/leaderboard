@@ -46,6 +46,16 @@ header {
   row-gap: 20px;
 }
 
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .board-title input {
   border: none;
   padding: 12px 25px;
@@ -84,12 +94,6 @@ input[type='number'] {
 .add-score form input[type='text']:focus,
 .add-score form input[type='number']:focus {
   outline: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .add-score form input[type='submit'] {
