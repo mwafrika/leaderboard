@@ -216,30 +216,38 @@ header h1,
   .board-title {
     margin: 12px 0;
   }
+
   .board-title h2 {
     font-size: 1.2rem;
   }
+
   .add-score h2 {
     font-size: 1.2rem;
   }
+
   .board-title input {
     padding: 10px 25px;
   }
+
   .add-score form input[type='submit'] {
     padding: 10px 25px;
   }
+
   header {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 992px) {
   .board-title input {
     padding: 10px 20px;
   }
+
   .board-title h2 {
     font-size: 1rem;
   }
 }
+
 @media screen and (max-width: 480px) {
   main {
     width: 100%;
@@ -248,11 +256,14 @@ header h1,
   .add-score {
     width: 100%;
   }
+
   .add-score h2 {
     margin: 4%;
   }
+
   .items {
     padding-bottom: 0;
+    width: 100%;
   }
 
   .board {
@@ -261,10 +272,6 @@ header h1,
     height: auto;
     row-gap: 20px;
     background: white;
-  }
-
-  .items {
-    width: 100%;
   }
 
   .board-title {
