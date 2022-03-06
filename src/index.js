@@ -2,14 +2,15 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import Score from './score.js';
 
 import('./style/style.css');
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+const url =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
 class Game {
   static displayScore = (userInfo) => {
     const ul = document.querySelector('.board-items');
     const li = document.createElement('li');
     li.innerHTML = `
-    <span>${userInfo.user} : </span><span>${userInfo.score}</span>
+    <span>${userInfo.user}  </span><span>${userInfo.score}</span>
     `;
     ul.appendChild(li);
   };
@@ -41,7 +42,7 @@ class Game {
             .addEventListener('click', () => {
               message.style.display = 'none';
             });
-        },
+        }
       );
 
       Game.clearInputs();
