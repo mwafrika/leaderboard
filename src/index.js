@@ -9,7 +9,7 @@ class Game {
     const ul = document.querySelector('.board-items');
     const li = document.createElement('li');
     li.innerHTML = `
-    <span>${userInfo.user} : </span><span>${userInfo.score}</span>
+    <span>${userInfo.user}  </span><span>${userInfo.score}</span>
     `;
     ul.appendChild(li);
   };

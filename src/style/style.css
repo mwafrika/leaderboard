@@ -174,6 +174,7 @@ header h1,
   flex-direction: column;
   width: 100%;
   list-style: none;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   -ms-overflow-style: none;
@@ -190,6 +191,7 @@ header h1,
 .board-items li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 50px;
   padding: 10px;
 }
@@ -200,7 +202,7 @@ header h1,
 
 @media screen and (max-width: 768px) {
   main {
-    width: 100%;
+    width: 90%;
   }
 
   .add-score {
@@ -209,6 +211,40 @@ header h1,
 
   .board {
     column-gap: 5%;
+  }
+
+  .board-title {
+    margin: 12px 0;
+  }
+
+  .board-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .add-score h2 {
+    font-size: 1.2rem;
+  }
+
+  .board-title input {
+    padding: 10px 25px;
+  }
+
+  .add-score form input[type='submit'] {
+    padding: 10px 25px;
+  }
+
+  header {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .board-title input {
+    padding: 10px 20px;
+  }
+
+  .board-title h2 {
+    font-size: 1rem;
   }
 }
 
@@ -221,16 +257,21 @@ header h1,
     width: 100%;
   }
 
+  .add-score h2 {
+    margin: 4%;
+  }
+
+  .items {
+    padding-bottom: 0;
+    width: 100%;
+  }
+
   .board {
     column-gap: 5%;
     flex-direction: column;
     height: auto;
     row-gap: 20px;
     background: white;
-  }
-
-  .items {
-    width: 100%;
   }
 
   .board-title {
