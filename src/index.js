@@ -2,8 +2,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import Score from './score.js';
 
 import('./style/style.css');
-const url =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
 class Game {
   static displayScore = (userInfo) => {
@@ -42,7 +41,7 @@ class Game {
             .addEventListener('click', () => {
               message.style.display = 'none';
             });
-        }
+        },
       );
 
       Game.clearInputs();
